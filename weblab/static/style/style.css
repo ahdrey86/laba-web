@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Центрирование формы логина */
+#login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background: url('../static/img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#login form {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
