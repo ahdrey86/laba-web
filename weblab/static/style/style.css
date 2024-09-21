@@ -5,7 +5,6 @@ body, html {
     background-color: #f4f4f4;
 }
 
-/* Шапка сайта */
 header {
     background-color: #333;
     color: #fff;
@@ -13,10 +12,30 @@ header {
     text-align: center;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Интервал между элементами навигации */
+}
+
 nav a {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px; /* Добавим немного округления */
+}
+
+nav a:hover {
+    color: tomato; /* Цвет текста при наведении */
+    border-bottom: 2px solid tomato; /* Подчёркивание ссылки при наведении */
+}
+
+nav a.active {
+    color: tomato;
+    font-weight: bold; /* Жирный шрифт для активной ссылки */
+    border-bottom: 2px solid tomato; /* Подчёркивание активной ссылки */
 }
 
 .hero {
@@ -55,60 +74,75 @@ th, td {
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-form label {
-    margin-bottom: 5px;
-}
-
-form input, form select, form textarea, form button {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #555;
-}
-
-/* Центрирование формы логина */
-#login {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-body {
-    background: url('../static/img/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
-
-#login form {
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+footer nav a:hover {
+    color: tomato; /* Цвет текста при наведении */
+    border-bottom: 1px solid tomato; /* Подчёркивание ссылки при наведении */
+}
+
+/* Адаптивные стили */
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column; /* Вертикальная ориентация навигации */
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0; /* Уменьшение отступов для ссылок */
+    }
+
+    table {
+        font-size: 14px; /* Уменьшение размера текста в таблице */
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 12px; /* Еще большее уменьшение текста в таблице */
+    }
+
+    section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .hero img {
+        width: 90%; /* Уменьшение изображения на мобильных */
+    }
+}
+
+@media (max-width: 400px) {
+    .hero img {
+        width: 100%; /* Изображение занимает всю ширину */
+    }
+
+    table {
+        font-size: 10px; /* Минимальный размер текста в таблице */
+    }
 }
