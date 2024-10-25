@@ -98,7 +98,7 @@ function displayDishes() {
 
         // Добавляем содержимое карточки
         dishCard.innerHTML = `
-            <img src="../static/${dish.image}" alt="${dish.name}">
+            <img src="../weblab/static/${dish.image}" alt="${dish.name}">
             <p>${dish.name}</p>
             <p>Объем/Вес: ${dish.count}</p>
             <p>Цена: ${dish.price}₽</p>
