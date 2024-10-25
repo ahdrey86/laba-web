@@ -25,27 +25,7 @@
         <section id="soups">
             <h2>Супы</h2>
             <div class="menu-section">
-                <div class="dish">
-                    <img src="../static/img/soup1.jpg" alt="Суп Том Ям">
-                    <p>Том Ям</p>
-                    <p>Объем: 350 мл</p>
-                    <p>Цена: 300₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/soup2.jpg" alt="Суп Борщ">
-                    <p>Борщ</p>
-                    <p>Объем: 400 мл</p>
-                    <p>Цена: 250₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/soup3.jpg" alt="Крем-суп">
-                    <p>Крем-суп</p>
-                    <p>Объем: 300 мл</p>
-                    <p>Цена: 280₽</p>
-                    <button>Добавить</button>
-                </div>
+                <!-- Здесь будут динамически добавлены супы -->
             </div>
         </section>
 
@@ -53,27 +33,7 @@
         <section id="main-dishes">
             <h2>Главные блюда</h2>
             <div class="menu-section">
-                <div class="dish">
-                    <img src="../static/img/main1.jpg" alt="Паста Карбонара">
-                    <p>Паста Карбонара</p>
-                    <p>Вес: 250 г</p>
-                    <p>Цена: 400₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/main2.jpg" alt="Стейк с овощами">
-                    <p>Стейк с овощами</p>
-                    <p>Вес: 300 г</p>
-                    <p>Цена: 700₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/main3.jpg" alt="Куриное филе с картофелем">
-                    <p>Куриное филе с картофелем</p>
-                    <p>Вес: 200 г</p>
-                    <p>Цена: 350₽</p>
-                    <button>Добавить</button>
-                </div>
+                <!-- Здесь будут динамически добавлены главные блюда -->
             </div>
         </section>
 
@@ -81,30 +41,78 @@
         <section id="drinks">
             <h2>Напитки</h2>
             <div class="menu-section">
-                <div class="dish">
-                    <img src="../static/img/drink1.jpg" alt="Лимонад">
-                    <p>Лимонад</p>
-                    <p>Объем: 500 мл</p>
-                    <p>Цена: 150₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/drink2.jpg" alt="Кофе">
-                    <p>Кофе</p>
-                    <p>Объем: 300 мл</p>
-                    <p>Цена: 100₽</p>
-                    <button>Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="../static/img/drink3.jpg" alt="Сок">
-                    <p>Сок</p>
-                    <p>Объем: 500 мл</p>
-                    <p>Цена: 120₽</p>
-                    <button>Добавить</button>
-                </div>
+                <!-- Здесь будут динамически добавлены напитки -->
             </div>
         </section>
-    </main>
+
+<section class="order-form">
+    <h2>Сделать заказ</h2>
+    <form action="https://httpbin.org/post" method="POST">
+        <div class="form-container">
+            <!-- Блок с заказом клиента -->
+            <div class="form-column">
+                <fieldset>
+                    <legend>Ваш заказ</legend>
+
+                    <!-- Здесь будет обновляться JavaScript -->
+                    <p id="soup-order">Блюдо не выбрано</p>
+                    <p id="main-order">Блюдо не выбрано</p>
+                    <p id="drink-order">Напиток не выбран</p>
+                    <p id="total-price"></p>
+
+                    <label for="comment">Комментарии к заказу</label>
+                    <textarea id="comment" name="comment"></textarea>
+                </fieldset>
+            </div>
+
+            <!-- Блок с данными клиента -->
+            <div class="form-column">
+                <fieldset>
+                    <legend>Ваши данные</legend>
+
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="address">Адрес доставки</label>
+                    <input type="text" id="address" name="address" required>
+                    <small>Доставка осуществляется только по Москве</small>
+
+                    <!-- Чекбокс для подписки на рассылку -->
+                    <div>
+                        <input type="checkbox" id="subscribe" name="subscribe" class="choose" checked>
+                        <label for="subscribe">Получать информацию о скидках и акциях</label>
+                    </div>
+
+                    <!-- Радиокнопки для выбора времени доставки -->
+                    <div class="checkbox-group">
+                        <label>Выберите время доставки:</label>
+                        <div>
+                            <input type="radio" id="asap" name="delivery_time" class="choose">
+                            <label for="asap">Доставка сразу</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="scheduled" name="delivery_time" class="choose">
+                            <label for="scheduled">Доставка к указанному времени</label>
+                        </div>
+                    </div>
+
+                    <!-- Поле для указания времени -->
+                    <label for="time">Укажите время доставки (если выбрано)</label>
+                    <input type="time" id="time" name="time" min="07:00" max="23:00" step="300">
+
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</section>
 
     <footer>
         <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
@@ -114,5 +122,8 @@
             <a href="lunch.html" class="active">Собрать ланч</a> <!-- Активный пункт меню -->
         </nav>
     </footer>
+
+    <!-- Подключение скрипта -->
+    <script src="../static/script/lunch.js"></script>
 </body>
 </html>
