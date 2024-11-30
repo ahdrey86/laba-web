@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Собрать ланч - Food Construct</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../weblab/static/style/style.css">
-    <link rel="stylesheet" href="../weblab/static/style/lunch.css"> <!-- Дополнительный файл стилей -->
+    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="../static/style/lunch.css"> <!-- Дополнительный файл стилей -->
 </head>
 <body>
     <header>
@@ -21,31 +21,196 @@
     </header>
 
     <main>
+      <section class="combo-lunch">
+    <h2>Доступные для заказа комбо</h2>
+
+    <div class="lunch-grid">
+        <!-- Вариант 1 -->
+        <div class="lunch-option">
+            <div class="category">
+                <span class="emoji">🍲</span> <!-- Эмодзи для супа -->
+                <p>Суп</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🍖</span> <!-- Эмодзи для основного блюда -->
+                <p>Главное блюдо</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥗</span> <!-- Эмодзи для салата -->
+                <p>Салат</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥤</span> <!-- Эмодзи для напитка -->
+                <p>Напиток</p>
+            </div>
+        </div>
+
+        <!-- Вариант 2 -->
+        <div class="lunch-option">
+            <div class="category">
+                <span class="emoji">🍲</span> <!-- Эмодзи для супа -->
+                <p>Суп</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🍖</span> <!-- Эмодзи для основного блюда -->
+                <p>Главное блюдо</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥤</span> <!-- Эмодзи для напитка -->
+                <p>Напиток</p>
+            </div>
+        </div>
+
+        <!-- Вариант 3 -->
+        <div class="lunch-option">
+            <div class="category">
+                <span class="emoji">🍲</span> <!-- Эмодзи для супа -->
+                <p>Суп</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥗</span> <!-- Эмодзи для салата -->
+                <p>Салат</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥤</span> <!-- Эмодзи для напитка -->
+                <p>Напиток</p>
+            </div>
+        </div>
+
+        <!-- Вариант 4 -->
+        <div class="lunch-option">
+            <div class="category">
+                <span class="emoji">🍖</span> <!-- Эмодзи для основного блюда -->
+                <p>Главное блюдо</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥗</span> <!-- Эмодзи для салата -->
+                <p>Салат</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥤</span> <!-- Эмодзи для напитка -->
+                <p>Напиток</p>
+            </div>
+        </div>
+
+        <!-- Вариант 5 -->
+        <div class="lunch-option">
+            <div class="category">
+                <span class="emoji">🍖</span> <!-- Эмодзи для основного блюда -->
+                <p>Главное блюдо</p>
+            </div>
+            <div class="category">
+                <span class="emoji">🥤</span> <!-- Эмодзи для напитка -->
+                <p>Напиток</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Десерты в центре -->
+    <div class="dessert">
+        <h3>Десерты (входит в любой ланч)</h3>
+    </div>
+</section>
+
+<form id="lunch-form">
+    <label for="soup">Суп:</label>
+    <select id="soup" name="soup">
+        <option value="none">Выберите суп</option>
+        <option value="soup1">Суп 1</option>
+        <option value="soup2">Суп 2</option>
+        <option value="soup3">Суп 3</option>
+    </select>
+    
+    <label for="main">Главное блюдо:</label>
+    <select id="main" name="main">
+        <option value="none">Выберите основное блюдо</option>
+        <option value="main1">Блюдо 1</option>
+        <option value="main2">Блюдо 2</option>
+        <option value="main3">Блюдо 3</option>
+    </select>
+    
+    <label for="salad">Салат:</label>
+    <select id="salad" name="salad">
+        <option value="none">Выберите салат</option>
+        <option value="salad1">Салат 1</option>
+        <option value="salad2">Салат 2</option>
+    </select>
+
+    <label for="drink">Напиток:</label>
+    <select id="drink" name="drink">
+        <option value="none">Выберите напиток</option>
+        <option value="drink1">Напиток 1</option>
+        <option value="drink2">Напиток 2</option>
+    </select>
+
+    <button type="submit">Отправить</button>
+</form>
+
+<div id="notification"></div>
+
         <!-- Блок с супами -->
         <section id="soups">
             <h2>Супы</h2>
-            <div class="menu-section">
-                <!-- Здесь будут динамически добавлены супы -->
+            <div class="filters">
+                <button class="filter-btn" data-kind="all">Все</button>
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
             </div>
+            <section class="menu-section">
+                <!-- Здесь будут динамически добавлены супы -->
+            </section>
         </section>
 
-        <!-- Блок с главными блюдами -->
         <section id="main-dishes">
             <h2>Главные блюда</h2>
-            <div class="menu-section">
-                <!-- Здесь будут динамически добавлены главные блюда -->
+            <div class="filters">
+                <button class="filter-btn" data-kind="all">Все</button>
+                <button class="filter-btn" data-kind="fish">Рыбное</button>
+                <button class="filter-btn" data-kind="meat">Мясное</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианское</button>
             </div>
+            <section class="menu-section">
+                <!-- Здесь будут динамически добавлены блюда -->
+            </section>
         </section>
 
-        <!-- Блок с напитками -->
         <section id="drinks">
             <h2>Напитки</h2>
-            <div class="menu-section">
-                <!-- Здесь будут динамически добавлены напитки -->
+            <div class="filters">
+                <button class="filter-btn" data-kind="all">Все</button>
+                <button class="filter-btn" data-kind="cold">Холодный</button>
+                <button class="filter-btn" data-kind="hot">Горячий</button>
             </div>
+            <section class="menu-section">
+                <!-- Здесь будут динамически добавлены напитки -->
+            </section>
         </section>
 
-<section class="order-form">
+        <section id="salads-starters">
+            <h2>Салаты и стартеры</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="all">Все</button>
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+            </div>
+            <section class="menu-section"></section>
+        </section>
+
+        <section id="desserts">
+            <h2>Десерты</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="all">Все</button>
+                <button class="filter-btn" data-kind="small">Маленькая порция</button>
+                <button class="filter-btn" data-kind="medium">Средняя порция</button>
+                <button class="filter-btn" data-kind="large">Большая порция</button>
+            </div>
+            <section class="menu-section"></section>
+        </section>
+		
+		
+		<section class="order-form">
     <h2>Сделать заказ</h2>
     <form action="https://httpbin.org/post" method="POST">
         <div class="form-container">
@@ -53,15 +218,16 @@
             <div class="form-column">
                 <fieldset>
                     <legend>Ваш заказ</legend>
-
                     <!-- Здесь будет обновляться JavaScript -->
-                    <p id="soup-order">Блюдо не выбрано</p>
-                    <p id="main-order">Блюдо не выбрано</p>
-                    <p id="drink-order">Напиток не выбран</p>
-                    <p id="total-price"></p>
+                    <p id="soup-order">Суп: Блюдо не выбрано</p>
+                    <p id="main-order">Главное блюдо: Блюдо не выбрано</p>
+                    <p id="drink-order">Напиток: Блюдо не выбрано</p>
+                    <p id="salad-order">Салат/стартер: Блюдо не выбрано</p> 
+                    <p id="dessert-order">Десерт: Блюдо не выбрано</p> 
+                    <p id="total-price">Итого: 0 ₽</p>
 
                     <label for="comment">Комментарии к заказу</label>
-                    <textarea id="comment" name="comment"></textarea>
+                    <textarea id="comment" name="comment" placeholder="Напишите комментарии..."></textarea>
                 </fieldset>
             </div>
 
@@ -71,36 +237,40 @@
                     <legend>Ваши данные</legend>
 
                     <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
 
                     <label for="phone">Номер телефона</label>
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required placeholder="Введите ваш номер телефона">
 
                     <label for="address">Адрес доставки</label>
-                    <input type="text" id="address" name="address" required>
+                    <input type="text" id="address" name="address" required placeholder="Введите адрес доставки">
                     <small>Доставка осуществляется только по Москве</small>
 
-                    <!-- Чекбокс для подписки на рассылку -->
-                    <div>
-                        <input type="checkbox" id="subscribe" name="subscribe" class="choose" checked>
-                        <label for="subscribe">Получать информацию о скидках и акциях</label>
-                    </div>
+                 <div class="checkbox-group">
+    <input type="checkbox" id="subscribe" name="subscribe" class="choose" checked>
+    <label for="subscribe">Получать информацию о скидках и акциях</label>
+</div>
 
-                    <!-- Радиокнопки для выбора времени доставки -->
-                    <div class="checkbox-group">
-                        <label>Выберите время доставки:</label>
-                        <div>
-                            <input type="radio" id="asap" name="delivery_time" class="choose">
-                            <label for="asap">Доставка сразу</label>
-                        </div>
-                        <div>
-                            <input type="radio" id="scheduled" name="delivery_time" class="choose">
-                            <label for="scheduled">Доставка к указанному времени</label>
-                        </div>
-                    </div>
+<div class="delivery-time">
+    <label>Выберите время доставки:</label>
+    <div class="radio-option">
+        <input type="radio" id="asap" name="delivery_time" class="choose">
+        <label for="asap">Доставка сразу</label>
+    </div>
+    <div class="radio-option">
+        <input type="radio" id="scheduled" name="delivery_time" class="choose">
+        <label for="scheduled">Доставка к указанному времени</label>
+    </div>
+</div>
+
+<div class="time-selection">
+    <label for="time">Укажите время доставки (если выбрано)</label>
+    <input type="time" id="time" name="time" min="07:00" max="23:00" step="300">
+</div>
+
 
                     <!-- Поле для указания времени -->
                     <label for="time">Укажите время доставки (если выбрано)</label>
@@ -114,6 +284,8 @@
     </form>
 </section>
 
+    </main>
+
     <footer>
         <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
         <p>Email: <a href="mailto:info@foodconstruct.ru">info@foodconstruct.ru</a></p>
@@ -123,7 +295,6 @@
         </nav>
     </footer>
 
-    <!-- Подключение скрипта -->
-    <script src="../weblab/static/script/lunch.js"></script>
+    <script src="../static/script/lunch.js"></script>
 </body>
 </html>
