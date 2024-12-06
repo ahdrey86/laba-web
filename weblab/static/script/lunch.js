@@ -2,34 +2,34 @@ const dishes = [
     // Супы (6 блюд)
     { keyword: 'gazpacho', name: 'Гаспачо', price: 195, category: 'soups', kind: 'veg', image: '../static/img/gazpacho.webp' },
     { keyword: 'borscht', name: 'Борщ', price: 250, category: 'soups', kind: 'meat', image: '../static/img/borscht.webp' },
-    { keyword: 'fish_soup', name: 'Уха', price: 220, category: 'soups', kind: 'fish', image: 'soups/fish_soup' },
-    { keyword: 'mushroom_soup', name: 'Грибной суп', price: 200, category: 'soups', kind: 'veg', image: 'soups/mushroom' },
-    { keyword: 'chicken_soup', name: 'Куриный суп', price: 230, category: 'soups', kind: 'meat', image: 'soups/chicken' },
-    { keyword: 'shrimp_soup', name: 'Суп с креветками', price: 260, category: 'soups', kind: 'fish', image: 'soups/shrimp' },
+    { keyword: 'fish_soup', name: 'Уха', price: 220, category: 'soups', kind: 'fish', image: '../static/img/uja.webp' },
+    { keyword: 'mushroom_soup', name: 'Грибной суп', price: 200, category: 'soups', kind: 'veg', image: '../static/img/crem.jpg' },
+    { keyword: 'chicken_soup', name: 'Куриный суп', price: 230, category: 'soups', kind: 'meat', image: '../static/img/chickensoup.webp' },
+    { keyword: 'shrimp_soup', name: 'Суп с креветками', price: 260, category: 'soups', kind: 'fish', image: '../static/img/shrimp.jpg' },
 
     // Главные блюда (6 блюд)
-    { keyword: 'steak', name: 'Стейк', price: 650, category: 'main-dishes', kind: 'meat', image: 'main/steak' },
-    { keyword: 'grilled_salmon', name: 'Лосось на гриле', price: 750, category: 'main-dishes', kind: 'fish', image: 'main/salmon' },
-    { keyword: 'ratatouille', name: 'Рататуй', price: 400, category: 'main-dishes', kind: 'veg', image: 'main/ratatouille' },
-    { keyword: 'pasta', name: 'Паста с овощами', price: 300, category: 'main-dishes', kind: 'veg', image: 'main/pasta' },
-    { keyword: 'beef_burger', name: 'Говяжий бургер', price: 550, category: 'main-dishes', kind: 'meat', image: 'main/beef_burger' },
-    { keyword: 'fish_taco', name: 'Рыбное тако', price: 500, category: 'main-dishes', kind: 'fish', image: 'main/fish_taco' },
+    { keyword: 'steak', name: 'Стейк', price: 650, category: 'main-dishes', kind: 'meat', image: '../static/img/steak.webp' },
+    { keyword: 'grilled_salmon', name: 'Лосось на гриле', price: 750, category: 'main-dishes', kind: 'fish', image: '../static/img/losos.webp' },
+    { keyword: 'ratatouille', name: 'Рататуй', price: 400, category: 'main-dishes', kind: 'veg', image: '../static/img/ratata.webp' },
+    { keyword: 'pasta', name: 'Паста с овощами', price: 300, category: 'main-dishes', kind: 'veg', image: '../static/img/pasta.webp' },
+    { keyword: 'beef_burger', name: 'Говяжий бургер', price: 550, category: 'main-dishes', kind: 'meat', image: '../static/img/burger.webp' },
+    { keyword: 'fish_taco', name: 'Рыбное тако', price: 500, category: 'main-dishes', kind: 'fish', image: '../static/img/taco.webp' },
 
     // Салаты и стартеры (6 блюд)
-    { keyword: 'greek_salad', name: 'Греческий салат', price: 200, category: 'salads-starters', kind: 'veg', image: 'salads/greek' },
-    { keyword: 'caesar_salad', name: 'Цезарь с курицей', price: 250, category: 'salads-starters', kind: 'meat', image: 'salads/caesar' },
-    { keyword: 'tuna_tartare', name: 'Тартар из тунца', price: 300, category: 'salads-starters', kind: 'fish', image: 'salads/tuna_tartare' },
-    { keyword: 'vegetable_starter', name: 'Овощная тарелка', price: 180, category: 'salads-starters', kind: 'veg', image: 'salads/vegetable' },
-    { keyword: 'bruschetta', name: 'Брускетта', price: 220, category: 'salads-starters', kind: 'veg', image: 'salads/bruschetta' },
-    { keyword: 'carrot_salad', name: 'Морковный салат', price: 190, category: 'salads-starters', kind: 'veg', image: 'salads/carrot' },
+    { keyword: 'greek_salad', name: 'Греческий салат', price: 200, category: 'salads-starters', kind: 'veg', image: '../static/img/greece.webp' },
+    { keyword: 'caesar_salad', name: 'Цезарь с курицей', price: 250, category: 'salads-starters', kind: 'meat', image: '../static/img/caesar.webp' },
+    { keyword: 'tuna_tartare', name: 'Тартар из тунца', price: 300, category: 'salads-starters', kind: 'fish', image: '../static/img/tartar.webp' },
+    { keyword: 'vegetable_starter', name: 'Овощная тарелка', price: 180, category: 'salads-starters', kind: 'veg', image: '../static/img/vegetable.webp' },
+    { keyword: 'bruschetta', name: 'Брускетта', price: 220, category: 'salads-starters', kind: 'veg', image: '../static/img/brusket.webp' },
+    { keyword: 'carrot_salad', name: 'Морковный салат', price: 190, category: 'salads-starters', kind: 'veg', image: '../static/img/carrot.jpeg' },
 
     // Напитки (6 блюд)
-    { keyword: 'lemonade', name: 'Лимонад', price: 150, category: 'drinks', kind: 'cold', image: 'drinks/lemonade' },
-    { keyword: 'tea', name: 'Чай', price: 100, category: 'drinks', kind: 'hot', image: 'drinks/tea' },
-    { keyword: 'coffee', name: 'Кофе', price: 200, category: 'drinks', kind: 'hot', image: 'drinks/coffee' },
-    { keyword: 'juice', name: 'Апельсиновый сок', price: 120, category: 'drinks', kind: 'cold', image: 'drinks/juice' },
-    { keyword: 'milkshake', name: 'Молочный коктейль', price: 180, category: 'drinks', kind: 'cold', image: 'drinks/milkshake' },
-    { keyword: 'hot_chocolate', name: 'Горячий шоколад', price: 210, category: 'drinks', kind: 'hot', image: 'drinks/hot_chocolate' },
+    { keyword: 'lemonade', name: 'Лимонад', price: 150, category: 'drinks', kind: 'cold', image: '../static/img/limonad.webp' },
+    { keyword: 'tea', name: 'Чай', price: 100, category: 'drinks', kind: 'hot', image: '../static/img/tea.webp' },
+    { keyword: 'coffee', name: 'Кофе', price: 200, category: 'drinks', kind: 'hot', image: '../static/img/coffe.webp' },
+    { keyword: 'juice', name: 'Апельсиновый сок', price: 120, category: 'drinks', kind: 'cold', image: '../static/img/orange.webp' },
+    { keyword: 'milkshake', name: 'Молочный коктейль', price: 180, category: 'drinks', kind: 'cold', image: '../static/img/milkshake.webp' },
+    { keyword: 'hot_chocolate', name: 'Горячий шоколад', price: 210, category: 'drinks', kind: 'hot', image: '../static/img/chocalate.webp' },
 
     // Десерты (6 блюд)
     { keyword: 'chocolate_cake', name: 'Шоколадный торт', price: 250, category: 'desserts', kind: 'medium', image: 'desserts/chocolate_cake' },
@@ -39,7 +39,6 @@ const dishes = [
     { keyword: 'tiramisu', name: 'Тирамису', price: 200, category: 'desserts', kind: 'medium', image: 'desserts/tiramisu' },
     { keyword: 'fruit_platter', name: 'Фруктовая тарелка', price: 180, category: 'desserts', kind: 'small', image: 'desserts/fruit_platter' },
 ];
-
 
 const selectedDishes = { soups: null, 'main-dishes': null, drinks: null, salads: null, desserts: null };
 
